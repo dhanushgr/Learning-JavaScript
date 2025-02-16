@@ -1,0 +1,29 @@
+JAVASCRIPT
+
+1. Numbers and Math
+- can write the JS code in the browser's console(F12)
+- alert('hello');	//alert messages pops up
+- document.body.innerHTML = 'hello'	//changes the body of the page into what you write
+- Math in JS follows the BODMAS rule(order of operations)
+- while doing math with the money better to do it in cents/paisa because it causes some error when dealing with floating numbers
+- 10% cannot be used instead use *0.1 while doing Math
+
+2.String
+- String and Numbers can be concatenated - Type coercion(automatic type conversion)
+- typeof 'hello' or 4 gives what datatype it is.
+- JS adds form left to right
+- String can be written in 'hello', "hello", `hello`
+- `string` it is called as Template Strings. 
+	Functions:
+
+	1. It has Interpolation = insert a value directly in a string.${}
+		for eg: items(${1+1}) = out put will be items(2)
+	2. MultiLineString:
+		`DhanushGR
+		 ISE`
+
+3. HTML, CSS, JavaScript
+- The notes of HTML and CSS is in another repository
+- The JS can be embedded in HTML file in the body element
+- It should be always at the end of the body element before it ends, it's a good practice in general.(Let's the web page to load first and then loads the js code for interactive).
+- The JS element should is <script>
