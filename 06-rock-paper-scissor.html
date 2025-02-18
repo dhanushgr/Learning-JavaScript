@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+</head>
+<body>
+    <p>Rock Paper Scissor</p>
+    <button onclick="
+        const randomNumber = Math.random();
+        let computerMove = '';
+        let result = '';
+        if(randomNumber>=0 && randomNumber<1/3){
+            computerMove = 'rock';
+        } else if (randomNumber>=1/3 && randomNumber<2/3) {
+            computerMove ='paper';
+        } else {
+            computerMove ='scissor';
+        }
+
+        if(computerMove === 'rock'){
+            result = 'it\'s a Tie!!';
+        } else if (computerMove === 'paper'){
+            result = 'you lose!!';
+        } else if(computerMove === 'scissor'){
+            result = 'you win!!';
+        }
+
+        alert(`you picked rock, computer picked ${computerMove}, ${result}`);
+    ">Rock</button>
+    <button onclick="
+        const randomNumber = Math.random();
+        let computerMove = '';
+        let result = '';
+        if(randomNumber>=0 && randomNumber<1/3){
+            computerMove = 'rock';
+        } else if (randomNumber>=1/3 && randomNumber<2/3) {
+            computerMove ='paper';
+        } else {
+            computerMove ='scissor';
+        }
+
+        if(computerMove === 'rock'){
+            result = 'you win!!';
+        } else if (computerMove === 'paper'){
+            result = 'it\'s a Tie!!';
+        } else if(computerMove === 'scissor'){
+            result = 'you lose!!';
+        }
+
+        alert(`you picked paper, computer picked ${computerMove}, ${result}`);
+    ">Paper</button>
+    <button onclick="
+        const randomNumber = Math.random();
+        let computerMove = '';
+        let result = '';
+        if(randomNumber>=0 && randomNumber<1/3){
+            computerMove = 'rock';
+        } else if (randomNumber>=1/3 && randomNumber<2/3) {
+            computerMove ='paper';
+        } else {
+            computerMove ='scissor';
+        }
+
+        if(computerMove === 'rock'){
+            result = 'you lose!!';
+        } else if (computerMove === 'paper'){
+            result = 'you win!!';
+        } else if(computerMove === 'scissor'){
+            result = 'it\'s a Tie!!';
+        }
+
+        alert(`you picked scissor, computer picked ${computerMove}, ${result}`);
+    ">Scissor</button>
+
+    <br><br>
+
+    <p><a href="https://supersimple.dev/projects/rock-paper-scissors/" target="_blank">Click here</a> to see the final version of the project</p>
+
+    <Script>
+        
+    </Script>
+</body>
+</html>
+
+<!--
+
+optimized code:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <script>
+        function determineComputerMove() {
+            const randomNumber = Math.random();
+            if (randomNumber < 1/3) return 'rock';
+            if (randomNumber < 2/3) return 'paper';
+            return 'scissor';
+        }
+
+        function determineResult(playerMove, computerMove) {
+            if (playerMove === computerMove) return "it's a Tie!!";
+            if (
+                (playerMove === 'rock' && computerMove === 'scissor') ||
+                (playerMove === 'paper' && computerMove === 'rock') ||
+                (playerMove === 'scissor' && computerMove === 'paper')
+            ) {
+                return 'you win!!';
+            }
+            return 'you lose!!';
+        }
+
+        function playGame(playerMove) {
+            const computerMove = determineComputerMove();
+            const result = determineResult(playerMove, computerMove);
+            alert(`you picked ${playerMove}, computer picked ${computerMove}, ${result}`);
+        }
+    </script>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="playGame('rock')">Rock</button>
+    <button onclick="playGame('paper')">Paper</button>
+    <button onclick="playGame('scissor')">Scissor</button>
+
+    <br><br>
+
+    <p><a href="https://supersimple.dev/projects/rock-paper-scissors/" target="_blank">Click here</a> to see the final version of the project</p>
+</body>
+</html>
+-->
