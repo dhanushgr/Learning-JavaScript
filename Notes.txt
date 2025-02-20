@@ -27,3 +27,26 @@ JAVASCRIPT
 - The JS can be embedded in HTML file in the body element
 - It should be always at the end of the body element before it ends, it's a good practice in general.(Let's the web page to load first and then loads the js code for interactive).
 - The JS element should is <script>
+
+4. booleans, comparisons
+- true and false without any ''.
+- normally == is used in other languages, but in JS === is used instead of == to compare the values
+- === compares thhe value 
+- == converts both the value to one type and then checks it.
+- use !== instead of != 
+
+For eg: 5 == '5.00' (this converts the string into number and then compares both of them)
+		true
+
+		5 === '5.00'
+		false
+
+		5 === 5
+		true
+
+
+if(true){}
+if(false){} ==> This can be take the values of:
+				false, 0, '', NaN, Undefined, null
+if(false, 0, '', NaN, Undefined, null) ==> this runs as if it is false.
+All the value other than this are true.
