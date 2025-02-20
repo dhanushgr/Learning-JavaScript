@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+<body>
+    <script>
+
+        /*
+        if(truthy){}
+        if(falsy){}
+
+        consider cartQuantity, if it is 0, then it comes under falsy value
+        id it is 1 or above, it comes under truthy value.
+
+        you don't have to explicitly say that  if(cartQuantity > 0) like we used to do it in Java.
+        you can just write  if(cartQuantity) and it checks the value of it and do the operation.
+        */
+
+        console.log(!1); //returns false
+        console.log(!0); //returns true
+        console.log('hello' / 5); //returns NaN
+        let variable;
+        console.log(variable);//returns Undefined
+
+
+        //Ternary operator, instead of writing
+        let a = 2;
+        if(5 > a){
+            console.log(` 5 is greater than ${a}`);
+        } else {
+            console.log(` 5 is lesser than ${a}`);
+        }
+        //you can just write
+        5>a ? console.log(` 5 is greater than ${a}`) : console.log(` 5 is lesser than ${a}`);
+
+
+
+        //Guard operator (&&): checks the 1st statement is false, if it is then it doesnot run the rest of the code and returns what it should, instead of using 
+        if (5 > a) {
+            console.log(` 5 is greater than ${a}`);
+        }
+        // you can also write
+        5>a && console.log(` 5 is greater than ${a}`);
+
+
+
+        //default operator (||), instead of using
+        if(5<a){
+            console.log(`5 is lesser than ${a}`);
+        }
+        //you can write
+        !(5<a) || console.log(`5 is lesser than ${a}`);
+        
+    </script>
+</body>
+</html>
