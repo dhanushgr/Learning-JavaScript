@@ -48,11 +48,11 @@
     </div>
 
     <script>
-        const score ={
-            wins:0,
-            loss:0,
-            ties:0
-        };
+        const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loss: 0, ties: 0 };
+
+        //localStorage.getItem(score), this is in JSON format now, to convert it to JS object we are using JSON.parse method
+        console.log(JSON.parse(localStorage.getItem('score')));
+
         function pickComputerMove() {
             const randomNumber = Math.random();
             let computerMove;
@@ -85,6 +85,9 @@
 
         function playGame(playerMove) {
             let computerMove = pickComputerMove();
+            // This helps us to store the score locally, when refreshes the page, the score will remain the same instead of resetting to 0
+            // the local storage only stores in the form of string, so we have converted the score(number) to string by the use of JSON.stringify method.
+            localStorage.setItem('score', JSON.stringify(score));
             alert(`your move was ${playerMove}, computer's move was ${computerMove}, ${determineResult(playerMove, computerMove)}
             wins:${score.wins}, loss:${score.loss}, ties:${score.ties}`);
         }
