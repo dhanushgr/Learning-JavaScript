@@ -42,7 +42,18 @@
     </div>
 
     <script>
+        //using of default operator
         let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loss: 0, ties: 0 };
+        /*
+            if(score === null){
+            score = {
+                wins: 0,
+                loss: 0,
+                ties: 0
+                }
+            }
+         */
+
 
         //localStorage.getItem(score), this is in JSON format now, to convert it to JS object we are using JSON.parse method
         //console.log(JSON.parse(localStorage.getItem('score')));
@@ -86,12 +97,12 @@
         }
 
         function resetScore() {
+            localStorage.removeItem('score');
             score = {
                 wins: 0,
                 loss: 0,
                 ties: 0
             };
-            localStorage.setItem('score', JSON.stringify(score));
             alert('Score has been successfully reset');
         }
     </script>
