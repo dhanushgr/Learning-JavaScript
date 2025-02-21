@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        //this is an object(it's link struct in c++), even it is const we could change the value inside the object
+        const details = {
+            name: 'dhanush',
+            age: 22,
+            gender: 'male'
+        };
+
+        console.log(details);
+        console.log(details.name);  //by using dot notation we could each element in it
+        console.log(details.age);
+        console.log(details.gender);
+
+        details.name = 'Dhanush G R';
+        console.log(details);
+
+        delete details.age;
+        console.log(details);
+
+        console.log(details['name']); // same as console.log(details.name);
+        //we can also have object inside an object
+
+        //object
+        const product = {
+            name: "shirt",
+            'delivery-time': '1 day',
+            //nested object
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            //function inside object(Method)
+            fun: function function1() {
+                console.log('function1');
+            }
+        };
+
+        console.log(product.rating.stars);
+        console.log(product.rating.count);
+        console.log(product["delivery-time"]);  //you can't access this with dot operator
+
+        console.log(product.fun());
+
+        //here, console is an object and log is a function in the console object
+        console.log(typeof console);    //object
+        console.log(typeof console.log);    //function
+
+        console.log(JSON.stringify(product)); //converts JS Object to a JSON object, type is string
+        const jsonString = JSON.stringify(product); //storing string in a variable
+        console.log(JSON.parse(jsonString)); //converts JSON to JS object
+
+    </script>
+</body>
+</html>
