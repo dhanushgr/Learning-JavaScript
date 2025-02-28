@@ -57,6 +57,61 @@
         const jsonString = JSON.stringify(product); //storing string in a variable
         console.log(JSON.parse(jsonString)); //converts JSON to JS object
 
+
+        /*
+            AutoBoxing in JS
+            here the hello string is autoboxed and length method is called upon that string
+         */
+        console.log('hello'.length); //output: 5
+        console.log('hello'.toUpperCase()); //output: HELLO
+
+        /*
+            Objects are references
+            In here, the object 1 stores the reference to the memory where it is stored(just a memory address).
+            we could change the value even it is const because the const part is the memory address in here,
+            not the value stores.
+         */
+
+        const object1 = {
+            message: 'hello',
+        }
+        console.log(object1);
+        object1.message = 'hi';
+        console.log(object1);
+
+        const object2 = object1; //address og object1 gets stored to object2
+        console.log(object1);
+        console.log(object2);
+
+        const object3 = {
+            message: 'hello'
+        }
+        console.log(object3 === object1);
+        //created a new object3 which assigns new address to it so, false. compares the address of the objects
+        console.log(object1 === object2); //value of address was assinged so, true
+
+        const object4 = {
+            message: 'hello'
+        }
+        //const message = object4.message; //destructor
+        const {message} = object4; //shortcut for above
+
+        const object5 = {
+            //shorthand property
+            //message: message,
+            message,//shorthand property
+
+            //shorthand method
+            // method:function function1() {
+            //     console.log('method');
+            // }
+            method(){
+                console.log('method');
+            }
+        }
+
+        console.log(object5);
+        object5.method();
     </script>
 </body>
 </html>
