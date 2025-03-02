@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DOM</title>
+    </head>
+    <body>
+
+        <h4>DOM</h4>
+        <button>Good</button>
+
+        <script>
+            /*
+            the document is the build-in object of JS it directly changes the whole document file of web page
+            so it is called as DOM(Document Object Model)
+             */
+            document.body.innerHTML = 'Hello World';
+            document.title = 'dom';
+
+            console.log(document.body); //outputs the whole <body>
+            console.log(typeof document.body);  //outputs the type
+            console.log(document.body.innerHTML);   //outputs the body
+            document.title = 'Good';
+
+            // document.querySelector selects the element from the page.
+            // the element should be within the ''
+            console.log(document.querySelector('button'));
+            console.log(document.querySelector('button').innerHTML = 'Bad');
+        </script>
+    </body>
+</html>
